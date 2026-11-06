@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pabhassara Lab — Công nghệ phụng sự trí tuệ Theravāda</title>
+<meta name="description" content="Pabhassara Lab — nơi giới thiệu các ứng dụng: In4Up, VDP, ZenGlish, Palineti. Công nghệ lặng lẽ phụng sự trí tuệ Theravāda.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Pabhassara <span>Lab</span></a>
+    <ul class="nav-links">
+      <li><a href="#projects">Dự án</a></li>
+      <li><a href="#philosophy">Triết lý</a></li>
+      <li><a href="#tech">Kỹ thuật</a></li>
+      <li><a href="#contact">Liên hệ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="ripple" aria-hidden="true"></div>
+  <div class="hero-content fade-in">
+    <p class="hero-eyebrow">pabhassara — ánh sáng vốn có của tâm</p>
+    <h1 class="hero-title">Pabhassara Lab</h1>
+    <p class="hero-tagline">Công nghệ lặng lẽ phụng sự trí tuệ Theravāda.</p>
+    <a href="#projects" class="btn btn-primary">Xem dự án ↓</a>
+  </div>
+</header>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy" class="philosophy">
+  <div class="container fade-in">
+    <p class="section-label">Triết lý</p>
+    <h2 class="philosophy-text">
+      Bốn ứng dụng, một con đường: dùng công nghệ hiện đại làm
+      <em>cầu nối</em> với trí tuệ Theravāda — từ ngôn ngữ Pali cổ xưa
+      đến Vi Diệu Pháp, từ việc nghe Pháp đến học tiếng Anh trong chánh niệm.
+    </h2>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+  <div class="container">
+    <p class="section-label fade-in">Dự án</p>
+
+    <!-- In4Up -->
+    <article class="project-card fade-in" style="--accent:#5B4B8A;">
+      <div class="project-visual">
+        <div class="project-visual-placeholder">In4Up</div>
+      </div>
+      <div class="project-info">
+        <h3>In4Up</h3>
+        <p class="project-tagline">Đa phương tiện đa nền tảng cho học ngôn ngữ chuyên sâu &amp; nghe Pháp.</p>
+        <div class="badges">
+          <span class="badge">Flutter</span>
+          <span class="badge">Native C++ / FFI</span>
+          <span class="badge">UltraTimeStretch Engine V2</span>
+        </div>
+        <p class="project-highlight">Âm thanh độ trung thực cao — time-stretch chuẩn phòng thu, tích hợp local AI qua GGUF.</p>
+        <div class="project-actions">
+          <a href="https://github.com/Pabhassaracitto/In4Up" class="btn btn-ghost" target="_blank" rel="noopener">Xem GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- VDP -->
+    <article class="project-card reverse fade-in" style="--accent:#2E6E62;">
+      <div class="project-visual">
+        <div class="project-visual-placeholder">VDP</div>
+      </div>
+      <div class="project-info">
+        <h3>VDP — Vi Diệu Pháp</h3>
+        <p class="project-tagline">Không gian để người học THẤY bằng mắt, HIỂU bằng tim, và TỰ MÌNH khám phá.</p>
+        <div class="badges">
+          <span class="badge">Flutter</span>
+          <span class="badge">Trực quan hóa dữ liệu</span>
+          <span class="badge">Offline-first</span>
+        </div>
+        <p class="project-highlight">Trực quan hóa 121 Tâm &amp; 52 Tâm Sở, ma trận Paccaya, lộ trình Vīthi.</p>
+        <div class="project-actions">
+          <a href="https://github.com/Pabhassaracitto/vdp" class="btn btn-ghost" target="_blank" rel="noopener">Xem GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ZenGlish -->
+    <article class="project-card fade-in" style="--accent:#4C7A3F;">
+      <div class="project-visual">
+        <div class="project-visual-placeholder">ZenGlish</div>
+      </div>
+      <div class="project-info">
+        <h3>ZenGlish</h3>
+        <p class="project-tagline">Học tiếng Anh trong tinh thần chánh niệm &amp; trí tuệ Theravāda.</p>
+        <div class="badges">
+          <span class="badge">Flutter</span>
+          <span class="badge">Text-to-Speech</span>
+          <span class="badge">Đa chủ đề Pháp</span>
+        </div>
+        <p class="project-highlight">Bài học ngôn ngữ lồng ghép Pháp thoại, luyện nghe-nói tự nhiên hằng ngày.</p>
+        <div class="project-actions">
+          <a href="https://github.com/Pabhassaracitto/zenglish" class="btn btn-ghost" target="_blank" rel="noopener">Xem GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Palineti -->
+    <article class="project-card reverse fade-in" style="--accent:#B8882A;">
+      <div class="project-visual">
+        <div class="project-visual-placeholder">Palineti</div>
+      </div>
+      <div class="project-info">
+        <h3>Palineti</h3>
+        <p class="project-tagline">Hành trình học từ vựng &amp; ngữ pháp tiếng Pali — cổ ngữ của Tam Tạng.</p>
+        <div class="badges">
+          <span class="badge">Flutter</span>
+          <span class="badge">Đa ngôn ngữ (10+ locale)</span>
+          <span class="badge">GitHub Pages</span>
+        </div>
+        <p class="project-highlight">Hỗ trợ Anh, Sinhala, Trung, Myanmar, Hindi — tiếp cận cổ ngữ từ nhiều nền văn hóa Phật giáo.</p>
+        <div class="project-actions">
+          <a href="https://github.com/Pabhassaracitto/palineti" class="btn btn-ghost" target="_blank" rel="noopener">Xem GitHub</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- TECH DEPTH -->
+<section id="tech" class="tech">
+  <div class="container fade-in">
+    <p class="section-label">Chiều sâu kỹ thuật</p>
+    <div class="tech-grid">
+      <div class="tech-item">
+        <span class="tech-num">01</span>
+        <h4>Native C++</h4>
+        <p>Engine xử lý âm thanh/DSP hiệu năng cao, gọi qua Dart FFI.</p>
+      </div>
+      <div class="tech-item">
+        <span class="tech-num">02</span>
+        <h4>GGUF Local AI</h4>
+        <p>Mô hình ngôn ngữ &amp; dịch thuật chạy on-device, không phụ thuộc mạng.</p>
+      </div>
+      <div class="tech-item">
+        <span class="tech-num">03</span>
+        <h4>Offline-first</h4>
+        <p>Dữ liệu &amp; tính năng cốt lõi hoạt động không cần kết nối Internet.</p>
+      </div>
+      <div class="tech-item">
+        <span class="tech-num">04</span>
+        <h4>Đa ngôn ngữ</h4>
+        <p>Hỗ trợ 10+ ngôn ngữ, phục vụ cộng đồng Phật giáo toàn cầu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" class="footer">
+  <div class="container fade-in">
+    <p class="footer-quote">"Pabhassaram idaṃ cittaṃ" — Tâm này vốn sáng chói.</p>
+    <div class="footer-links">
+      <a href="https://github.com/Pabhassaracitto" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="footer-copy">© 2026 Pabhassara Lab.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
