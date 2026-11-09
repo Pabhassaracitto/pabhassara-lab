@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZenGlish — Học tiếng Anh trong chánh niệm Theravada | Pabhassara Lab</title>
+<meta name="description" content="ZenGlish — học tiếng Anh qua Pháp thoại Theravada: 8 bài beta, audio giọng tổng hợp có ghi nhãn, offline-first, không cần tài khoản. Tải v1.1.2.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="--accent:#4C7A3F;">
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Pabhassara <span>Lab</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#projects">Dự án</a></li>
+      <li><a href="index.html#philosophy">Triết lý</a></li>
+      <li><a href="index.html#tech">Kỹ thuật</a></li>
+      <li><a href="index.html#contact">Liên hệ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">← Pabhassara Lab</a>
+      <span class="breadcrumb-sep">/</span>
+      <span aria-current="page">ZenGlish</span>
+    </nav>
+    <p class="section-label">Dự án · ZenGlish</p>
+    <h1 class="detail-title">ZenGlish</h1>
+    <p class="detail-tagline">Học tiếng Anh trong tinh thần chánh niệm &amp; trí tuệ Theravāda — mỗi bài học là một câu chuyện Pháp, mỗi câu tiếng Anh là một hơi thở tỉnh thức.</p>
+    <div class="badges" style="margin-bottom:10px;">
+      <span class="badge">Flutter</span>
+      <span class="badge">Text-to-Speech</span>
+      <span class="badge">Offline-first</span>
+      <span class="badge">Android beta</span>
+    </div>
+    <div class="detail-actions">
+      <a href="https://github.com/Pabhassaracitto/zenglish/releases/tag/v1.1.2" class="btn btn-primary btn-app" target="_blank" rel="noopener">Tải bản v1.1.2 ↓</a>
+      <a href="https://github.com/Pabhassaracitto/zenglish" class="btn btn-ghost" target="_blank" rel="noopener">Xem trên GitHub</a>
+    </div>
+  </div>
+</header>
+
+<section class="detail-section overview-text fade-in">
+  <div class="container">
+    <p class="section-label">Tổng quan</p>
+    <h2 class="section-title">Tiếng Anh như một pháp hành</h2>
+    <p>ZenGlish dạy tiếng Anh không qua giáo trình khô khan mà qua <strong>8 bài học beta</strong> xoay quanh các chủ đề Pháp — chánh niệm, từ bi, vô thường — được lưu sẵn trong <code>assets/data/lessons/</code>. Mỗi bài là một câu chuyện ngắn song ngữ, kèm từ vựng chọn lọc và câu hỏi gợi mở để bạn vừa học ngôn ngữ vừa chiêm nghiệm. Trang <strong>Library (/lessons)</strong> liệt kê đủ 8 bài, còn <strong>Home</strong> gợi ý bài tiếp theo và 4 thẻ “quick-dharma” để ôn nhanh.</p>
+    <p>Âm thanh được xử lý minh bạch: <strong>11 tệp audio giọng tổng hợp</strong> (pre-rendered synthetic voice) thuộc AudioCatalog được host trên Hugging Face — app ưu tiên thứ tự <em>assets → đã tải về → stream</em> và luôn gắn nhãn “giọng tổng hợp”; khi có bản thu thật, bản thật được ưu tiên. Các bài ngoài catalog dùng <strong>TTS của thiết bị</strong> qua interface <code>SpeechSynthesizer</code>. Toàn bộ tiến trình và hồ sơ lưu cục bộ bằng SharedPreferences, <strong>không cần tài khoản, không đồng bộ</strong>, và AI từ xa bị vô hiệu hóa ngay cả khi có <code>OPENAI_API_KEY</code>.</p>
+    <p>ZenGlish hiện ở giai đoạn <strong>Android beta nội bộ</strong>, chưa phát hành trên cửa hàng — bản dựng debug được xuất tự động qua CI thành artifact <code>android-offline-beta-debug-&lt;run_id&gt;</code>. Dự án pin Flutter 3.44.0 (<code>env.FLUTTER_VERSION_DEFAULT</code> trong <code>.github/workflows/quality.yml</code>), dùng font tiêu đề Merriweather đóng gói sẵn và quản lý bản dịch duy nhất qua <code>lib/l10n/*.arb</code> (sinh bằng <code>flutter gen-l10n</code>, không sửa tay). Phiên bản trong pubspec <code>1.0.1-beta.1+2</code> chỉ là kế hoạch, chưa phải bản phát hành APK.</p>
+    <p class="overview-note">Nguồn: README của <code>Pabhassaracitto/zenglish</code> (nhánh main, tag v1.1.2 ngày 2026-10-24), đọc qua gh api. Các chi tiết AudioCatalog/TTS/offline lấy nguyên văn từ tài liệu.</p>
+  </div>
+</section>
+
+<section class="detail-section fade-in">
+  <div class="container">
+    <p class="section-label">Tính năng chính</p>
+    <h2 class="section-title">Học nhẹ, thấm sâu</h2>
+    <div class="feature-grid">
+      <article class="feature-item">
+        <span class="feature-icon">⬙</span>
+        <h4>8 bài học beta theo chủ đề Pháp</h4>
+        <p>Câu chuyện song ngữ, từ vựng chọn lọc và câu hỏi chiêm nghiệm — mỗi bài là một buổi thực tập ngắn.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">◐</span>
+        <h4>Audio minh bạch — giọng tổng hợp có nhãn</h4>
+        <p>11 tệp synthetic voice trong AudioCatalog (Hugging Face) luôn ghi rõ “giọng tổng hợp”; bản thu thật được ưu tiên khi có.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">◎</span>
+        <h4>TTS thiết bị cho mọi bài</h4>
+        <p>Bài ngoài catalog dùng <code>SpeechSynthesizer</code> gọi TTS của máy — không cần mạng, không gửi dữ liệu ra ngoài.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">▭</span>
+        <h4>Library &amp; Home gợi ý</h4>
+        <p>Library liệt kê đủ bài; Home gợi ý bài tiếp theo và 4 thẻ quick-dharma để ôn nhanh trong ngày.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">✎</span>
+        <h4>Hồ sơ &amp; tiến trình on-device</h4>
+        <p>Lưu cục bộ bằng SharedPreferences, không tài khoản, không đồng bộ — dữ liệu ở lại trên máy bạn.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">⬢</span>
+        <h4>Offline-first, remote AI tắt</h4>
+        <p>Bài học và audio ưu tiên offline; AI đám mây bị vô hiệu hóa ngay cả khi cấu hình key — đúng tinh thần tối giản.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section fade-in">
+  <div class="container">
+    <p class="section-label">Hướng dẫn sử dụng</p>
+    <h2 class="section-title">Bắt đầu với ZenGlish</h2>
+
+    <ol class="steps">
+      <li class="step">
+        <span class="step-num">1</span>
+        <div class="step-body">
+          <h4>Bước 1 — Tải và cài đặt (Android beta)</h4>
+          <p>Mở <a href="https://github.com/Pabhassaracitto/zenglish/releases/tag/v1.1.2" target="_blank" rel="noopener">trang Releases của ZenGlish</a> và tải <code>zenglish-Android-ARM64-1.1.2.apk</code> (hoặc <code>app-release.aab</code> nếu bạn cài qua Play Console nội bộ). Trên điện thoại Android, cho phép “Cài từ nguồn không xác định” rồi mở tệp APK để cài. Hiện app chỉ phân phối beta nội bộ, chưa có trên App Store/Play Store.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-num">2</span>
+        <div class="step-body">
+          <h4>Bước 2 — Chọn bài trong Library</h4>
+          <p>Mở app, vào tab <strong>Library (/lessons)</strong> để thấy đủ 8 bài beta. Bài nào có biểu tượng loa là đã có audio; chạm vào để xem nội dung song ngữ và từ vựng. Trang <strong>Home</strong> sẽ gợi ý bài tiếp theo dựa trên tiến trình của bạn.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-num">3</span>
+        <div class="step-body">
+          <h4>Bước 3 — Luyện nghe-nói cốt lõi</h4>
+          <p>Trong bài học, bấm nút phát để nghe — nếu là “giọng tổng hợp” sẽ có nhãn rõ ràng. Nghe một lần, sau đó bấm TTS để nghe lại từng câu và nhại theo (shadowing). Đọc câu hỏi chiêm nghiệm cuối bài và thử trả lời bằng tiếng Anh — không cần đúng hết, quan trọng là thực hành.</p>
+        </div>
+      </li>
+    </ol>
+
+    <h3 class="faq-title">Câu hỏi thường gặp</h3>
+    <div class="faq">
+      <details>
+        <summary>App có cần mạng không?</summary>
+        <p>Không bắt buộc. Bài học lưu sẵn trong app; audio ưu tiên tệp có sẵn trong máy, rồi mới stream từ Hugging Face nếu thiếu. TTS dùng giọng của thiết bị nên offline vẫn nghe được.</p>
+      </details>
+      <details>
+        <summary>“Giọng tổng hợp” là gì?</summary>
+        <p>Là audio được tạo trước bằng giọng máy (11 tệp trong AudioCatalog). App luôn ghi nhãn để bạn phân biệt với bản thu thật — khi có bản thu thật, app sẽ tự ưu tiên bản thật.</p>
+      </details>
+      <details>
+        <summary>Tôi dùng iPhone/Windows thì sao?</summary>
+        <p>Bản v1.1.2 có <code>zenglish-iOS-1.1.2.ipa</code>, <code>zenglish-Windows-1.1.2.zip</code> và <code>zenglish-Linux-1.1.2.zip</code> trong trang Releases — bạn có thể thử, nhưng giai đoạn beta tập trung tối ưu cho Android.</p>
+      </details>
+      <details>
+        <summary>Dữ liệu học của tôi có bị gửi đi đâu không?</summary>
+        <p>Không. Tiến trình lưu bằng SharedPreferences ngay trên máy, không tài khoản, không đồng bộ. Remote AI bị tắt ngay cả khi có cấu hình key.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section fade-in">
+  <div class="container">
+    <p class="section-label">Ảnh chụp màn hình</p>
+    <h2 class="section-title">Giao diện ZenGlish</h2>
+    <div class="shot-grid">
+      <figure>
+        <div class="shot-placeholder">
+          <span class="shot-icon">▣</span>
+          <p>[ảnh chụp màn hình thật cần thay]<br>Home — gợi ý bài &amp; thẻ quick-dharma</p>
+        </div>
+        <figcaption class="shot-caption">Home — bài gợi ý &amp; 4 thẻ Pháp ngắn</figcaption>
+      </figure>
+      <figure>
+        <div class="shot-placeholder">
+          <span class="shot-icon">▣</span>
+          <p>[ảnh chụp màn hình thật cần thay]<br>Library — danh sách 8 bài beta</p>
+        </div>
+        <figcaption class="shot-caption">Library — 8 bài học theo chủ đề</figcaption>
+      </figure>
+      <figure>
+        <div class="shot-placeholder">
+          <span class="shot-icon">▣</span>
+          <p>[ảnh chụp màn hình thật cần thay]<br>Bài học song ngữ &amp; audio</p>
+        </div>
+        <figcaption class="shot-caption">Bài học — song ngữ &amp; audio có nhãn</figcaption>
+      </figure>
+    </div>
+    <p class="shot-note">Chủ dự án sẽ thay 3 khung trên bằng ảnh chụp thật; khung hiện tại chỉ là giữ chỗ, không phải ảnh giả.</p>
+  </div>
+</section>
+
+<section class="detail-section fade-in" id="gop-y">
+  <div class="container">
+    <p class="section-label">Góp ý &amp; báo lỗi</p>
+    <h2 class="section-title">Cùng làm ZenGlish dễ học hơn</h2>
+    <div class="feedback-block">
+      <p class="feedback-lead">Gửi ẩn danh ngay trên trang này — không cần tài khoản GitHub hay email. Nếu bạn đã có tài khoản GitHub, có thể dùng link phụ bên dưới.</p>
+
+      <form id="feedback-form" data-app="ZenGlish" data-formspree="https://formspree.io/f/PLACEHOLDER_ZENGLISH_FORM_ID" novalidate>
+        <input type="hidden" name="app" value="ZenGlish">
+        <input type="hidden" name="_subject" value="[Bug] ZenGlish — báo lỗi từ Pabhassara Lab">
+        <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="feedback-tabs" role="group" aria-label="Loại góp ý">
+          <button type="button" class="ftype-btn active" data-type="bug" aria-pressed="true">🐞 Báo lỗi</button>
+          <button type="button" class="ftype-btn" data-type="enhancement" aria-pressed="false">💡 Góp ý tính năng</button>
+        </div>
+        <input type="hidden" name="type" value="bug">
+        <div class="f-row">
+          <div class="f-field">
+            <label for="fb-name-zen">Tên <span class="optional">(không bắt buộc)</span></label>
+            <input id="fb-name-zen" name="name" type="text" placeholder="Ẩn danh nếu để trống">
+          </div>
+          <div class="f-field">
+            <label for="fb-contact-zen">Email <span class="optional">(không bắt buộc — để được phản hồi)</span></label>
+            <input id="fb-contact-zen" name="email" type="email" placeholder="ten@email.com">
+          </div>
+        </div>
+        <div class="f-field">
+          <label for="fb-message-zen">Mô tả <span class="req">*</span></label>
+          <textarea id="fb-message-zen" name="message" rows="4" required placeholder="Mô tả lỗi bạn gặp phải…"></textarea>
+        </div>
+        <div class="f-field">
+          <label for="fb-details-zen" data-detail-label>C&aacute;c bước t&aacute;i hiện</label>
+          <textarea id="fb-details-zen" name="details" rows="3" placeholder="1. Mở app… 2. Chạm vào… 3. Điều gì xảy ra…"></textarea>
+        </div>
+        <div class="f-row">
+          <div class="f-field">
+            <label for="fb-device-zen">Thiết bị / Phiên bản</label>
+            <input id="fb-device-zen" name="device" type="text" placeholder="VD: Android 14, ZenGlish v1.1.2">
+          </div>
+          <div class="f-field" style="display:flex;align-items:flex-end;">
+            <button type="submit" class="btn btn-primary btn-app feedback-submit" style="width:100%;">Gửi góp ý</button>
+          </div>
+        </div>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="feedback-alt">
+        Có tài khoản GitHub? Mở trực tiếp trên repo
+        <a href="https://github.com/Pabhassaracitto/zenglish/issues/new?title=%5BBug%5D%20&labels=bug&body=**M%C3%B4%20t%E1%BA%A3%20l%E1%BB%97i%3A**%0A%0A**C%C3%A1c%20b%C6%B0%E1%BB%9Bc%20t%C3%A1i%20hi%E1%BB%87n%3A**%0A%0A**Thi%E1%BA%BFt%20b%E1%BB%8B%2FPhi%C3%AAn%20b%E1%BA%A3n%3A**" target="_blank" rel="noopener">🐞 Báo lỗi</a>
+        ·
+        <a href="https://github.com/Pabhassaracitto/zenglish/issues/new?title=%5B%C4%90%E1%BB%81%20xu%E1%BA%A5t%5D&labels=enhancement&body=**T%C3%B4i%20mu%E1%BB%91n...**%0A%0A**V%E1%BA%A5n%20%C4%91%E1%BB%81%20c%E1%BA%A7n%20gi%E1%BA%A3i%20quy%E1%BA%BFt%3A**%0A%0A**%C4%90%E1%BB%81%20xu%E1%BA%A5t%20c%E1%BB%A7a%20t%C3%B4i%3A**" target="_blank" rel="noopener">💡 Góp ý tính năng</a>
+        — tiêu đề/nhãn/nội dung đã điền sẵn.
+      </div>
+      <p class="privacy-note">Form ẩn danh gửi qua Formspree; chủ dự án cần thay <code>PLACEHOLDER_ZENGLISH_FORM_ID</code> bằng Form ID thật tại <a href="https://formspree.io" target="_blank" rel="noopener" style="border:none;">formspree.io</a> để kích hoạt. Trước đó form sẽ hướng dẫn dùng link GitHub.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact" class="footer">
+  <div class="container fade-in">
+    <p class="footer-quote">“Pabhassaram idaṃ cittaṃ” — Tâm này vốn sáng chói.</p>
+    <div class="footer-links">
+      <a href="index.html">← Về Pabhassara Lab</a>
+      <a href="https://github.com/Pabhassaracitto" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/Pabhassaracitto/zenglish" target="_blank" rel="noopener">ZenGlish</a>
+    </div>
+    <p class="footer-copy">© 2026 Pabhassara Lab.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="feedback.js"></script>
+</body>
+</html>

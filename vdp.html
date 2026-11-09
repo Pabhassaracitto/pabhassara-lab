@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VDP — Vi Diệu Pháp: 121 Tâm × 52 Tâm Sở, Paccaya, Vīthi | Pabhassara Lab</title>
+<meta name="description" content="VDP — học Vi Diệu Pháp bằng trực quan: ma trận 121 Tâm × 52 Tâm Sở, 24 Duyên, lộ trình Vīthi 17 sát-na. Offline 100%, quiz 3 cấp, TTS karaoke. Tải v0.10.3.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="--accent:#2E6E62;">
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Pabhassara <span>Lab</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#projects">Dự án</a></li>
+      <li><a href="index.html#philosophy">Triết lý</a></li>
+      <li><a href="index.html#tech">Kỹ thuật</a></li>
+      <li><a href="index.html#contact">Liên hệ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">← Pabhassara Lab</a>
+      <span class="breadcrumb-sep">/</span>
+      <span aria-current="page">VDP</span>
+    </nav>
+    <p class="section-label">Dự án · VDP</p>
+    <h1 class="detail-title">VDP — Vi Diệu Pháp</h1>
+    <p class="detail-tagline">Không gian để người học <em>THẤY</em> bằng mắt, <em>HIỂU</em> bằng tim và <em>TỰ MÌNH</em> khám phá Vi Diệu Pháp — theo chương trình của Ngài King Milanda A.</p>
+    <div class="badges" style="margin-bottom:10px;">
+      <span class="badge">Flutter</span>
+      <span class="badge">Trực quan hóa dữ liệu</span>
+      <span class="badge">Offline-first</span>
+      <span class="badge">26 locale giao diện</span>
+    </div>
+    <div class="detail-actions">
+      <a href="https://github.com/Pabhassaracitto/vdp/releases/tag/v0.10.3" class="btn btn-primary btn-app" target="_blank" rel="noopener">Tải bản v0.10.3 ↓</a>
+      <a href="https://github.com/Pabhassaracitto/vdp" class="btn btn-ghost" target="_blank" rel="noopener">Xem trên GitHub</a>
+    </div>
+  </div>
+</header>
+
+<section class="detail-section overview-text fade-in">
+  <div class="container">
+    <p class="section-label">Tổng quan</p>
+    <h2 class="section-title">Thấy Abhidhamma thay vì chỉ đọc về nó</h2>
+    <p>VDP (Vi Diệu Pháp) biến những bảng liệt kê khô khan thành trải nghiệm nhìn — chạm — hiểu. <strong>Bảng Tương Ưng</strong> đặt 121 Tâm (Citta) giao với 52 Tâm Sở (Cetasika) trong một ma trận tương tác: ô nào <strong>luôn đi kèm ✦ vàng đặc</strong>, ô nào <strong>thỉnh thoảng ◎ nét đứt</strong>, ô nào <strong>không bao giờ ✕ xám</strong> — đúng chuẩn Dual Encoding đạt WCAG 2.1 AA. Thay vì ghi nhớ định nghĩa, bạn chạm vào một ô và thấy ngay mối liên hệ đó có thật hay không.</p>
+    <p>Ứng dụng xây quanh ba trụ cột đã hoàn thành: <strong>24 Duyên (Paccaya)</strong>, <strong>lộ trình tâm 17 sát-na (Vīthi)</strong> với khóa học tương tác 17 bài, và bộ <strong>Quiz 3 cấp độ</strong> để tự kiểm tra. Từ v0.10.2, <strong>TTS đọc bài</strong> kèm playlist, chỉnh tốc độ và highlight kiểu karaoke áp dụng cho các tab Học / Nhân Duyên / ma trận. Toàn bộ nội dung được đóng gói sẵn trong <code>assets/data/*.json</code> (cittas, cetasikas, paccayas, vithis…), chạy <strong>offline 100%</strong> không cần mạng.</p>
+    <p>Độ chính xác được bảo vệ bằng hai lớp: biên tập nội dung theo chương trình của King Milanda A và bộ <code>data_validator.dart</code> với quy tắc cứng (tổ hợp bất khả thi bị từ chối) lẫn quy tắc mềm (tổng ≠121 sẽ cảnh báo). Giao diện hỗ trợ <strong>26 locale</strong> (nội dung vi+en hoàn chỉnh, 5 locale đang tiến hành hi/zh/si/my/ja), onboarding 3 màn hình và 17 module học — tất cả tuân thủ Accessibility-First (vùng chạm tối thiểu 48dp, tương phản cao).</p>
+    <p class="overview-note">Nguồn: README của <code>Pabhassaracitto/vdp</code> (nhánh main, tag v0.10.3 ngày 2026-10-07), đọc qua gh api. Các con số 121/52/24/17 lấy trực tiếp từ tài liệu dự án.</p>
+  </div>
+</section>
+
+<section class="detail-section fade-in">
+  <div class="container">
+    <p class="section-label">Tính năng chính</p>
+    <h2 class="section-title">Học bằng mắt, nhớ bằng trải nghiệm</h2>
+    <div class="feature-grid">
+      <article class="feature-item">
+        <span class="feature-icon">▦</span>
+        <h4>Bảng Tương Ưng 121×52</h4>
+        <p>Ma trận Citta×Cetasika tương tác — lọc, chạm, thấy ngay mối tương ưng theo mã màu Dual Encoding.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">◈</span>
+        <h4>24 Duyên (Paccaya)</h4>
+        <p>Khám phá 24 duyên hệ với diễn giải cô đọng, liên kết chéo tới tâm/tâm sở liên quan.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">◐</span>
+        <h4>Vīthi 17 sát-na</h4>
+        <p>Khóa học tương tác 17 bước mô phỏng lộ trình tâm — từ ngũ môn hướng tới đổng lực và na cảnh.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">✎</span>
+        <h4>Blur / Reveal — học chủ động</h4>
+        <p>Che đáp án, tự đoán rồi mở — thay vì đọc thụ động, bạn được thử trước khi biết.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">✦</span>
+        <h4>Quiz 3 cấp độ</h4>
+        <p>Từ nhận biết tới vận dụng: trắc nghiệm theo chủ đề, chấm điểm ngay, ôn lại chỗ sai.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">◉</span>
+        <h4>TTS karaoke &amp; playlist</h4>
+        <p>Giọng đọc Pali (just_audio + flutter_tts), chỉnh tốc độ, highlight theo câu, phát liên tục nhiều bài.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">⬢</span>
+        <h4>Offline 100% &amp; validator</h4>
+        <p>Dữ liệu JSON đóng gói sẵn, không cần mạng; <code>data_validator</code> chặn lỗi nội dung trước khi hiển thị.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">🌐</span>
+        <h4>26 locale &amp; WCAG AA</h4>
+        <p>Giao diện 26 ngôn ngữ, onboarding 3 bước, vùng chạm 48dp, tương phản và mã hóa kép đạt chuẩn.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section fade-in">
+  <div class="container">
+    <p class="section-label">Hướng dẫn sử dụng</p>
+    <h2 class="section-title">Bắt đầu với VDP</h2>
+
+    <ol class="steps">
+      <li class="step">
+        <span class="step-num">1</span>
+        <div class="step-body">
+          <h4>Bước 1 — Tải và cài đặt</h4>
+          <p>Mở <a href="https://github.com/Pabhassaracitto/vdp/releases/tag/v0.10.3" target="_blank" rel="noopener">trang Releases của VDP</a> và chọn tệp cho thiết bị: <code>VDP-Android-ARM64-*.apk</code>, <code>VDP-iOS-*.ipa</code> (cài qua sideload/TestFlight), hoặc <code>VDP-Windows/Linux/Web-*.zip</code> để chạy trên máy tính. Giải nén zip và mở app — không cần đăng nhập.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-num">2</span>
+        <div class="step-body">
+          <h4>Bước 2 — Đi qua 3 màn hình làm quen</h4>
+          <p>Lần đầu mở app bạn sẽ thấy onboarding 3 slide giới thiệu Bảng Tương Ưng, Paccaya và Vīthi. Vuốt qua để vào màn hình chính, chọn ngôn ngữ giao diện (trong 26 locale) ở góc trên.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-num">3</span>
+        <div class="step-body">
+          <h4>Bước 3 — Dùng tính năng cốt lõi: chạm vào ma trận</h4>
+          <p>Vào tab <strong>Bảng Tương Ưng</strong>. Chạm một ô bất kỳ: nếu viền vàng đặc ✦ nghĩa là tâm sở đó luôn đi với tâm này; nét đứt ◎ là thỉnh thoảng; ✕ xám là không bao giờ. Bật chế độ <strong>Blur/Reveal</strong> để tự đoán trước khi xem đáp án — cách học chủ động hiệu quả hơn đọc suông. Muốn nghe giảng, bấm nút loa để TTS đọc bài với highlight karaoke; chỉnh tốc độ ở thanh playlist.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-num">4</span>
+        <div class="step-body">
+          <h4>Bước 4 — Học lộ trình Vīthi và làm quiz</h4>
+          <p>Sang tab <strong>Vīthi</strong> để đi qua 17 sát-na theo thứ tự — mỗi bước có minh họa và giải thích ngắn. Sau mỗi cụm bài, mở <strong>Quiz</strong> (3 cấp độ) để kiểm tra; câu sai sẽ được gợi ý ôn lại đúng chỗ trong ma trận.</p>
+        </div>
+      </li>
+    </ol>
+
+    <h3 class="faq-title">Câu hỏi thường gặp</h3>
+    <div class="faq">
+      <details>
+        <summary>App có cần mạng không?</summary>
+        <p>Không. VDP offline 100% — toàn bộ JSON (cittas, cetasikas, paccayas, vithis…) đã nằm trong app. Chỉ khi cập nhật bản mới bạn mới cần tải lại từ Releases.</p>
+      </details>
+      <details>
+        <summary>Tôi không rành Abhidhamma, có học được không?</summary>
+        <p>Có. App thiết kế cho người mới — onboarding 3 bước, mỗi ô/bài đều có chú giải tiếng Việt, và quiz chia 3 cấp từ dễ tới khó. Bạn có thể bắt đầu chỉ bằng việc chạm vào ma trận và xem màu sắc.</p>
+      </details>
+      <details>
+        <summary>Âm thanh Pali phát thế nào?</summary>
+        <p>Nhờ <code>just_audio</code> (file thu sẵn) và <code>flutter_tts</code> (giọng hệ thống). Bạn có thể chỉnh tốc độ, bật playlist phát liên tục và theo dõi highlight karaoke theo câu.</p>
+      </details>
+      <details>
+        <summary>Tôi là dev — chạy từ mã nguồn ra sao?</summary>
+        <p>Cần Flutter ≥3.2.0. Chạy <code>flutter pub get</code>, rồi <code>flutter pub run build_runner build --delete-conflicting-outputs</code> để sinh mã, cuối cùng <code>flutter run</code>. Dữ liệu nằm ở <code>assets/data/*.json</code>.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section fade-in">
+  <div class="container">
+    <p class="section-label">Ảnh chụp màn hình</p>
+    <h2 class="section-title">Giao diện VDP</h2>
+    <div class="shot-grid">
+      <figure>
+        <div class="shot-placeholder">
+          <span class="shot-icon">▣</span>
+          <p>[ảnh chụp màn hình thật cần thay]<br>Bảng Tương Ưng 121×52 — mã màu ✦/◎/✕</p>
+        </div>
+        <figcaption class="shot-caption">Ma trận Citta×Cetasika tương tác</figcaption>
+      </figure>
+      <figure>
+        <div class="shot-placeholder">
+          <span class="shot-icon">▣</span>
+          <p>[ảnh chụp màn hình thật cần thay]<br>Lộ trình Vīthi 17 sát-na</p>
+        </div>
+        <figcaption class="shot-caption">Vīthi — khóa học 17 bước</figcaption>
+      </figure>
+      <figure>
+        <div class="shot-placeholder">
+          <span class="shot-icon">▣</span>
+          <p>[ảnh chụp màn hình thật cần thay]<br>TTS karaoke &amp; quiz 3 cấp</p>
+        </div>
+        <figcaption class="shot-caption">TTS highlight &amp; Quiz</figcaption>
+      </figure>
+    </div>
+    <p class="shot-note">Chủ dự án sẽ thay 3 khung trên bằng ảnh chụp thật; khung hiện tại chỉ là giữ chỗ, không phải ảnh giả.</p>
+  </div>
+</section>
+
+<section class="detail-section fade-in" id="gop-y">
+  <div class="container">
+    <p class="section-label">Góp ý &amp; báo lỗi</p>
+    <h2 class="section-title">Giúp VDP chính xác và dễ học hơn</h2>
+    <div class="feedback-block">
+      <p class="feedback-lead">Gửi ẩn danh ngay trên trang này — không cần tài khoản GitHub hay email. Nếu bạn đã có tài khoản GitHub, có thể dùng link phụ bên dưới.</p>
+
+      <form id="feedback-form" data-app="VDP" data-formspree="https://formspree.io/f/PLACEHOLDER_VDP_FORM_ID" novalidate>
+        <input type="hidden" name="app" value="VDP">
+        <input type="hidden" name="_subject" value="[Bug] VDP — báo lỗi từ Pabhassara Lab">
+        <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="feedback-tabs" role="group" aria-label="Loại góp ý">
+          <button type="button" class="ftype-btn active" data-type="bug" aria-pressed="true">🐞 Báo lỗi</button>
+          <button type="button" class="ftype-btn" data-type="enhancement" aria-pressed="false">💡 Góp ý tính năng</button>
+        </div>
+        <input type="hidden" name="type" value="bug">
+        <div class="f-row">
+          <div class="f-field">
+            <label for="fb-name-vdp">Tên <span class="optional">(không bắt buộc)</span></label>
+            <input id="fb-name-vdp" name="name" type="text" placeholder="Ẩn danh nếu để trống">
+          </div>
+          <div class="f-field">
+            <label for="fb-contact-vdp">Email <span class="optional">(không bắt buộc — để được phản hồi)</span></label>
+            <input id="fb-contact-vdp" name="email" type="email" placeholder="ten@email.com">
+          </div>
+        </div>
+        <div class="f-field">
+          <label for="fb-message-vdp">Mô tả <span class="req">*</span></label>
+          <textarea id="fb-message-vdp" name="message" rows="4" required placeholder="Mô tả lỗi bạn gặp phải…"></textarea>
+        </div>
+        <div class="f-field">
+          <label for="fb-details-vdp" data-detail-label>C&aacute;c bước t&aacute;i hiện</label>
+          <textarea id="fb-details-vdp" name="details" rows="3" placeholder="1. Mở app… 2. Chạm vào… 3. Điều gì xảy ra…"></textarea>
+        </div>
+        <div class="f-row">
+          <div class="f-field">
+            <label for="fb-device-vdp">Thiết bị / Phiên bản</label>
+            <input id="fb-device-vdp" name="device" type="text" placeholder="VD: Android 14, VDP v0.10.3">
+          </div>
+          <div class="f-field" style="display:flex;align-items:flex-end;">
+            <button type="submit" class="btn btn-primary btn-app feedback-submit" style="width:100%;">Gửi góp ý</button>
+          </div>
+        </div>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="feedback-alt">
+        Có tài khoản GitHub? Mở trực tiếp trên repo
+        <a href="https://github.com/Pabhassaracitto/vdp/issues/new?title=%5BBug%5D%20&labels=bug&body=**M%C3%B4%20t%E1%BA%A3%20l%E1%BB%97i%3A**%0A%0A**C%C3%A1c%20b%C6%B0%E1%BB%9Bc%20t%C3%A1i%20hi%E1%BB%87n%3A**%0A%0A**Thi%E1%BA%BFt%20b%E1%BB%8B%2FPhi%C3%AAn%20b%E1%BA%A3n%3A**" target="_blank" rel="noopener">🐞 Báo lỗi</a>
+        ·
+        <a href="https://github.com/Pabhassaracitto/vdp/issues/new?title=%5B%C4%90%E1%BB%81%20xu%E1%BA%A5t%5D&labels=enhancement&body=**T%C3%B4i%20mu%E1%BB%91n...**%0A%0A**V%E1%BA%A5n%20%C4%91%E1%BB%81%20c%E1%BA%A7n%20gi%E1%BA%A3i%20quy%E1%BA%BFt%3A**%0A%0A**%C4%90%E1%BB%81%20xu%E1%BA%A5t%20c%E1%BB%A7a%20t%C3%B4i%3A**" target="_blank" rel="noopener">💡 Góp ý tính năng</a>
+        — tiêu đề/nhãn/nội dung đã điền sẵn.
+      </div>
+      <p class="privacy-note">Form ẩn danh gửi qua Formspree; chủ dự án cần thay <code>PLACEHOLDER_VDP_FORM_ID</code> bằng Form ID thật tại <a href="https://formspree.io" target="_blank" rel="noopener" style="border:none;">formspree.io</a> để kích hoạt. Trước đó form sẽ hướng dẫn dùng link GitHub.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact" class="footer">
+  <div class="container fade-in">
+    <p class="footer-quote">“Pabhassaram idaṃ cittaṃ” — Tâm này vốn sáng chói.</p>
+    <div class="footer-links">
+      <a href="index.html">← Về Pabhassara Lab</a>
+      <a href="https://github.com/Pabhassaracitto" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/Pabhassaracitto/vdp" target="_blank" rel="noopener">VDP</a>
+    </div>
+    <p class="footer-copy">© 2026 Pabhassara Lab.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="feedback.js"></script>
+</body>
+</html>
