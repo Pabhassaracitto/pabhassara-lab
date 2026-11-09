@@ -52,9 +52,13 @@
     <p class="section-label">Tổng quan</p>
     <h2 class="section-title">Thấy Abhidhamma thay vì chỉ đọc về nó</h2>
     <p>VDP (Vi Diệu Pháp) biến những bảng liệt kê khô khan thành trải nghiệm nhìn — chạm — hiểu. <strong>Bảng Tương Ưng</strong> đặt 121 Tâm (Citta) giao với 52 Tâm Sở (Cetasika) trong một ma trận tương tác: ô nào <strong>luôn đi kèm ✦ vàng đặc</strong>, ô nào <strong>thỉnh thoảng ◎ nét đứt</strong>, ô nào <strong>không bao giờ ✕ xám</strong> — đúng chuẩn Dual Encoding đạt WCAG 2.1 AA. Thay vì ghi nhớ định nghĩa, bạn chạm vào một ô và thấy ngay mối liên hệ đó có thật hay không.</p>
-    <p>Ứng dụng xây quanh ba trụ cột đã hoàn thành: <strong>24 Duyên (Paccaya)</strong>, <strong>lộ trình tâm 17 sát-na (Vīthi)</strong> với khóa học tương tác 17 bài, và bộ <strong>Quiz 3 cấp độ</strong> để tự kiểm tra. Từ v0.10.2, <strong>TTS đọc bài</strong> kèm playlist, chỉnh tốc độ và highlight kiểu karaoke áp dụng cho các tab Học / Nhân Duyên / ma trận. Toàn bộ nội dung được đóng gói sẵn trong <code>assets/data/*.json</code> (cittas, cetasikas, paccayas, vithis…), chạy <strong>offline 100%</strong> không cần mạng.</p>
-    <p>Độ chính xác được bảo vệ bằng hai lớp: biên tập nội dung theo chương trình của King Milanda A và bộ <code>data_validator.dart</code> với quy tắc cứng (tổ hợp bất khả thi bị từ chối) lẫn quy tắc mềm (tổng ≠121 sẽ cảnh báo). Giao diện hỗ trợ <strong>26 locale</strong> (nội dung vi+en hoàn chỉnh, 5 locale đang tiến hành hi/zh/si/my/ja), onboarding 3 màn hình và 17 module học — tất cả tuân thủ Accessibility-First (vùng chạm tối thiểu 48dp, tương phản cao).</p>
-    <p class="overview-note">Nguồn: README của <code>Pabhassaracitto/vdp</code> (nhánh main, tag v0.10.3 ngày 2026-10-07), đọc qua gh api. Các con số 121/52/24/17 lấy trực tiếp từ tài liệu dự án.</p>
+    <p>Ứng dụng xây quanh ba trụ cột đã hoàn thành: <strong>24 Duyên (Paccaya)</strong>, <strong>lộ trình tâm 17 sát-na (Vīthi)</strong> với khóa học tương tác 17 bài, và bộ <strong>Quiz 3 cấp độ</strong> để tự kiểm tra. Từ v0.10.2, <strong>TTS đọc bài</strong> kèm playlist, chỉnh tốc độ và highlight kiểu karaoke áp dụng cho các tab Học / Nhân Duyên / ma trận. Toàn bộ dữ liệu cấu trúc nằm trong <code>assets/data/*.json</code> (cittas, cetasikas, paccayas, vithis…), nội dung bài học và bản dịch trong <code>assets/content/</code> — cố gắng bundle để dùng cục bộ, nhưng một số chức năng như TTS vẫn phụ thuộc giọng có sẵn trên thiết bị.</p>
+    <p>Độ chính xác được bảo vệ bằng hai lớp: biên tập nội dung theo chương trình của King Milanda A và bộ <code>data_validator.dart</code> với quy tắc cứng (tổ hợp bất khả thi bị từ chối) lẫn quy tắc mềm (tổng ≠121 sẽ cảnh báo). Validator chỉ chặn khi phát hiện lỗi cứng; cảnh báo mềm không chặn tải và validator chỉ chạy khi cả hai danh sách Tâm/Tâm Sở không rỗng. Giao diện có <strong>26 locale</strong> (<code>vi en zh zh_TW hi my si ar bn bo de es fr id it ja km ko lo mn mr pt ru ta te th</code>), có thể chọn độc lập với ngôn ngữ nội dung; nội dung có <strong>9 lựa chọn</strong> — <code>vi</code> (gốc) + <code>en</code> và 7 bản nháp <code>hi zh zh_TW si my ja th</code> (thiếu bản dịch, cần duyệt giáo lý).</p>
+    <div style="background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;margin:20px 0;max-width:780px;">
+      <p class="section-label" style="margin-bottom:10px;">Dữ liệu hiện có trong repo</p>
+      <p style="font-size:0.88rem;color:var(--text-soft);margin:0;line-height:1.8;">Tâm <strong>121</strong> · Tâm Sở <strong>52</strong> · Sắc pháp <strong>28</strong> · Nghiệp <strong>16</strong> · Chi Duyên khởi <strong>12</strong> · Duyên Hệ <strong>24</strong> · Mô hình Vīthi <strong>4</strong> · Module học <strong>17</strong>. Tiến độ lưu cục bộ <code>shared_preferences</code>. Bản web chạy tại <a href="https://pabhassaracitto.github.io/vdp/" target="_blank" rel="noopener">pabhassaracitto.github.io/vdp</a> (cần bật Settings → Pages → Source: GitHub Actions).</p>
+    </div>
+    <p class="overview-note">Nguồn: README của <code>Pabhassaracitto/vdp</code> (nhánh main, cập nhật 09/11/2026, khai báo <code>0.10.2+7</code> trong pubspec — bản phát hành mới nhất <code>v0.10.3</code> trên GitHub). Linear: dự án VDP <em>atRisk</em>, tiến độ 9.3% — trọng tâm kiểm chứng giáo lý &amp; dịch 7 locale ưu tiên. Các con số 121/52/24/17 lấy trực tiếp từ tài liệu.</p>
   </div>
 </section>
 
@@ -154,8 +158,8 @@
         <p>Có. App thiết kế cho người mới — onboarding 3 bước, mỗi ô/bài đều có chú giải tiếng Việt, và quiz chia 3 cấp từ dễ tới khó. Bạn có thể bắt đầu chỉ bằng việc chạm vào ma trận và xem màu sắc.</p>
       </details>
       <details>
-        <summary>Âm thanh Pali phát thế nào?</summary>
-        <p>Nhờ <code>just_audio</code> (file thu sẵn) và <code>flutter_tts</code> (giọng hệ thống). Bạn có thể chỉnh tốc độ, bật playlist phát liên tục và theo dõi highlight karaoke theo câu.</p>
+        <summary>Âm thanh Pali phát thế nào? Có offline không?</summary>
+        <p>Nhờ <code>just_audio</code> (file thu sẵn) và <code>flutter_tts</code> (giọng hệ thống). Web dùng giọng của trình duyệt; bản native mặc định dùng TTS hệ thống — chất lượng, khả năng chạy nền và offline phụ thuộc thiết bị/OS. Xem <code>docs/audio-web-tts.md</code>.</p>
       </details>
       <details>
         <summary>Tôi là dev — chạy từ mã nguồn ra sao?</summary>

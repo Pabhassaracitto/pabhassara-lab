@@ -56,8 +56,12 @@
     <h2 class="section-title">Nghe chậm, đọc sâu, nhớ lâu — tất cả trong một studio</h2>
     <p>In4Up là “study studio” offline-first được xây cho hành giả muốn nghe Pháp và người học ngôn ngữ cần luyện nghe chuyên sâu. Thay vì mở nhiều app rời rạc, bạn có một không gian duy nhất để <strong>nghe ở tốc độ siêu chậm (từ 0.05× tới 10×)</strong>, đọc văn bản Pali/Anh/Việt với lớp IPA, shadowing theo câu và ôn lại bằng vườn ký ức — tất cả hoạt động kể cả khi không có mạng.</p>
     <p>Điểm khác biệt nằm ở engine <strong>UltraTimeStretch V2</strong> viết bằng C++ gọi qua Dart FFI: kéo giãn thời gian nhưng giữ nguyên âm sắc (formant-preserving), nên giọng nói vẫn tự nhiên ở 0.5× hay 0.3×. Kết hợp với Silero VAD tự tách mốc thời gian (auto-TOC), rolling waveform hiển thị trực quan và đồng bộ audio↔text, việc nghe đi nghe lại một đoạn Pháp thoại trở nên nhẹ nhàng và chính xác hơn.</p>
-    <p>Ứng dụng lưu dữ liệu cục bộ bằng Hive, đồng bộ tùy chọn qua Firebase (last-writer-wins + tombstones) và chỉ dùng AI đám mây khi bạn tự gắn API key (BYOK). Trên thiết bị, In4Up có thể chạy mô hình GGUF như Gemma hay Hy-MT để hỗ trợ dịch/gợi ý mà không gửi dữ liệu ra ngoài. 26 ngôn ngữ giao diện được hỗ trợ và bản phát hành được phân phối trực tiếp qua GitHub Releases, không qua cửa hàng ứng dụng.</p>
-    <p class="overview-note">Nguồn: README &amp; CHANGELOG của <code>Pabhassaracitto/In4Up</code> (nhánh main, tag 1.25.0, ngày 2026-11-09), đọc qua gh api. Giấy phép source-available phi thương mại.</p>
+    <p>Ứng dụng lưu dữ liệu cục bộ bằng Hive, đồng bộ tùy chọn qua Firebase (last-writer-wins + tombstones) và chỉ dùng AI đám mây khi bạn tự gắn API key (BYOK). Trên thiết bị, In4Up có thể chạy mô hình GGUF như Gemma hay Hy-MT để hỗ trợ dịch/gợi ý mà không gửi dữ liệu ra ngoài. 26 ngôn ngữ giao diện (555 thông điệp) được hỗ trợ và bản phát hành được phân phối trực tiếp qua GitHub Releases, không qua cửa hàng ứng dụng.</p>
+    <div style="background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;margin:20px 0;max-width:780px;">
+      <p class="section-label" style="margin-bottom:10px;">Thực trạng đo lại 09/11/2026</p>
+      <p style="font-size:0.9rem;color:var(--text-soft);margin:0;line-height:1.7;">Bảng công việc <strong>215 thẻ</strong> — ✅ 94 xong · 🔄 94 đang làm · 📋 21 đề xuất · 🚫 4 chặn. Mã nguồn <strong>750 tệp Dart / 332.640 dòng</strong> trong <code>lib/</code> + <strong>7.048 dòng C/C++</strong> (ngoài submodule) · <strong>278 tệp test</strong> · <strong>38 ADR</strong> (0022–0026 của chu kỳ này) · <strong>48 PLAN</strong> · <strong>25 module</strong> · CI 5 workflow. Bản mới nhất <strong>1.25.0+25</strong> — 4/4 job nền tảng xanh (Android · iOS · Windows · Linux). Nguồn duy nhất: <code>docs/project/KANBAN.md</code>.</p>
+    </div>
+    <p class="overview-note">Nguồn: README của <code>Pabhassaracitto/In4Up</code> (nhánh main, tag 1.25.0, commit 3df31e92, ngày 09/11/2026), đo lại bằng lệnh trong mục “How these numbers are produced”. Giấy phép source-available phi thương mại.</p>
   </div>
 </section>
 
@@ -105,7 +109,17 @@
       <article class="feature-item">
         <span class="feature-icon">⬢</span>
         <h4>Offline-first &amp; GGUF on-device</h4>
-        <p>Lưu cục bộ Hive, đồng bộ Firebase tùy chọn; chạy mô hình GGUF (Gemma/Hy-MT) trực tiếp trên máy khi cần.</p>
+        <p>Lưu cục bộ Hive, đồng bộ Firebase tùy chọn; chạy mô hình GGUF (Gemma/Hy-MT, VieNeu-TTS 170/292 MB) trực tiếp trên máy khi cần.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">◰</span>
+        <h4>Media tools &amp; Edge TTS</h4>
+        <p>FFmpeg bằng argument vector (hủy được), xuất đoạn A–B, tách audio từ video; 8 giọng Edge Neural + VieNeu voice cloning.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">⬔</span>
+        <h4>6-axis Knowledge &amp; Tipiṭaka</h4>
+        <p>6 kỹ năng read-only, Dictionary .db SQLite, YouTube LRC ~60 phút, Tipiṭaka quản lý DB, Cabin chống mất câu.</p>
       </article>
     </div>
   </div>
@@ -156,7 +170,7 @@
       </details>
       <details>
         <summary>Tôi có thể chạy trên máy tính không?</summary>
-        <p>Có. Windows được hỗ trợ đầy đủ; Linux hỗ trợ một phần (đang bị chặn bởi <code>webkit2gtk-4.1</code> trên một số bản phân phối); bản Web bị giới hạn — các engine native không khả dụng trên web. Hãy chọn đúng tệp trong trang Releases.</p>
+        <p>Có. Từ bản 1.22–1.25, <strong>Windows và Linux đều build xanh &amp; phát hành đủ</strong> — 4/4 job nền tảng xanh (đã sửa <code>webkit2gtk-4.1</code> và <code>CI-WINDOWS-01</code>). Bản Web là light reader — các engine native (FFI) không có trên web. Hãy chọn đúng tệp trong trang Releases.</p>
       </details>
       <details>
         <summary>Tốc độ chậm có làm méo giọng không?</summary>
@@ -164,7 +178,7 @@
       </details>
       <details>
         <summary>Tôi là lập trình viên — chạy từ mã nguồn thế nào?</summary>
-        <p>Cài Flutter 3.44.1 (bản CI-pin), chạy <code>flutter pub get</code> rồi <code>flutter run --flavor stable</code> (Android có các flavor stable/dev/beta). Xem thêm trong README của repo.</p>
+        <p>Cài Flutter 3.44.1 (bản CI-pin), chạy <code>git submodule update --init</code> cho native engines, rồi <code>flutter pub get</code> và <code>flutter run --flavor stable</code> (Android có các flavor stable/dev/beta; compileSdk 36 / targetSdk 35 / NDK 28.2 / Java 17). Xem thêm trong README của repo.</p>
       </details>
     </div>
   </div>
