@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>In4Up — Đa phương tiện cho học ngôn ngữ chuyên sâu & nghe Pháp | Pabhassara Lab</title>
+<meta name="description" content="In4Up — studio học tập đa phương tiện, offline-first: nghe chậm tới 0.05×, shadowing, reader Pali/ IPA, Memory Garden. Tải bản 1.25.0 cho Android/iOS/Windows/Linux.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="--accent:#5B4B8A;">
+
+<!-- NAV — trỏ về trang chủ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Pabhassara <span>Lab</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#projects">Dự án</a></li>
+      <li><a href="index.html#philosophy">Triết lý</a></li>
+      <li><a href="index.html#tech">Kỹ thuật</a></li>
+      <li><a href="index.html#contact">Liên hệ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO / BREADCRUMB -->
+<header class="detail-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">← Pabhassara Lab</a>
+      <span class="breadcrumb-sep">/</span>
+      <span aria-current="page">In4Up</span>
+    </nav>
+    <p class="section-label">Dự án · In4Up</p>
+    <h1 class="detail-title">In4Up</h1>
+    <p class="detail-tagline">Đa phương tiện đa nền tảng cho học ngôn ngữ chuyên sâu &amp; nghe Pháp — một nơi duy nhất để nghe, đọc, nói, viết, hiểu và ghi nhớ.</p>
+    <div class="badges" style="margin-bottom:10px;">
+      <span class="badge">Flutter</span>
+      <span class="badge">Native C++ / FFI</span>
+      <span class="badge">UltraTimeStretch Engine V2</span>
+      <span class="badge">Offline-first</span>
+    </div>
+    <div class="detail-actions">
+      <a href="https://github.com/Pabhassaracitto/In4Up/releases/tag/1.25.0" class="btn btn-primary btn-app" target="_blank" rel="noopener">Tải bản 1.25.0 ↓</a>
+      <a href="https://github.com/Pabhassaracitto/In4Up" class="btn btn-ghost" target="_blank" rel="noopener">Xem trên GitHub</a>
+    </div>
+  </div>
+</header>
+
+<!-- TỔNG QUAN -->
+<section class="detail-section overview-text fade-in">
+  <div class="container">
+    <p class="section-label">Tổng quan</p>
+    <h2 class="section-title">Nghe chậm, đọc sâu, nhớ lâu — tất cả trong một studio</h2>
+    <p>In4Up là “study studio” offline-first được xây cho hành giả muốn nghe Pháp và người học ngôn ngữ cần luyện nghe chuyên sâu. Thay vì mở nhiều app rời rạc, bạn có một không gian duy nhất để <strong>nghe ở tốc độ siêu chậm (từ 0.05× tới 10×)</strong>, đọc văn bản Pali/Anh/Việt với lớp IPA, shadowing theo câu và ôn lại bằng vườn ký ức — tất cả hoạt động kể cả khi không có mạng.</p>
+    <p>Điểm khác biệt nằm ở engine <strong>UltraTimeStretch V2</strong> viết bằng C++ gọi qua Dart FFI: kéo giãn thời gian nhưng giữ nguyên âm sắc (formant-preserving), nên giọng nói vẫn tự nhiên ở 0.5× hay 0.3×. Kết hợp với Silero VAD tự tách mốc thời gian (auto-TOC), rolling waveform hiển thị trực quan và đồng bộ audio↔text, việc nghe đi nghe lại một đoạn Pháp thoại trở nên nhẹ nhàng và chính xác hơn.</p>
+    <p>Ứng dụng lưu dữ liệu cục bộ bằng Hive, đồng bộ tùy chọn qua Firebase (last-writer-wins + tombstones) và chỉ dùng AI đám mây khi bạn tự gắn API key (BYOK). Trên thiết bị, In4Up có thể chạy mô hình GGUF như Gemma hay Hy-MT để hỗ trợ dịch/gợi ý mà không gửi dữ liệu ra ngoài. 26 ngôn ngữ giao diện được hỗ trợ và bản phát hành được phân phối trực tiếp qua GitHub Releases, không qua cửa hàng ứng dụng.</p>
+    <p class="overview-note">Nguồn: README &amp; CHANGELOG của <code>Pabhassaracitto/In4Up</code> (nhánh main, tag 1.25.0, ngày 2026-11-09), đọc qua gh api. Giấy phép source-available phi thương mại.</p>
+  </div>
+</section>
+
+<!-- TÍNH NĂNG CHÍNH -->
+<section class="detail-section fade-in">
+  <div class="container">
+    <p class="section-label">Tính năng chính</p>
+    <h2 class="section-title">Bảy studio trong một</h2>
+    <div class="feature-grid">
+      <article class="feature-item">
+        <span class="feature-icon">◐</span>
+        <h4>Listen — nghe siêu chậm</h4>
+        <p>Time-stretch 0.05×–10× giữ âm sắc, lặp A–B, rolling waveform và auto-TOC bằng Silero VAD + Whisper.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">◎</span>
+        <h4>Speak — shadowing &amp; chấm điểm</h4>
+        <p>Luyện nói theo mẫu, chấm điểm ở mức âm vị (phoneme-level) để biết mình phát âm đúng tới đâu.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">▭</span>
+        <h4>Watch — video &amp; phụ đề</h4>
+        <p>Xem video cục bộ kèm phụ đề đồng bộ, tua chính xác theo câu — thuận tiện cho bài giảng dài.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">⬙</span>
+        <h4>Read — reader tương tác</h4>
+        <p>Đọc PDF/Web/Tipiṭaka, lớp IPA qua MDX→CMUdict→G2P, bảng màu Okabe-Ito thân thiện với người mù màu.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">✎</span>
+        <h4>Write — viết chủ động</h4>
+        <p>Điền khuyết (cloze), diễn đạt lại, tóm tắt với chấm điểm heuristic ngay trên máy.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">⇄</span>
+        <h4>Understand — đồng bộ audio↔text</h4>
+        <p>Căn chỉnh âm thanh và văn bản, chế độ song ngữ giúp vừa nghe vừa đối chiếu nghĩa.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">✦</span>
+        <h4>Remember — Memory Garden</h4>
+        <p>Ôn tập ngắt quãng SM-2 &amp; FSRS, “Learn by Heart” — vườn ký ức nhắc đúng lúc, không nhồi nhét.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon">⬢</span>
+        <h4>Offline-first &amp; GGUF on-device</h4>
+        <p>Lưu cục bộ Hive, đồng bộ Firebase tùy chọn; chạy mô hình GGUF (Gemma/Hy-MT) trực tiếp trên máy khi cần.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HƯỚNG DẪN SỬ DỤNG -->
+<section class="detail-section fade-in">
+  <div class="container">
+    <p class="section-label">Hướng dẫn sử dụng</p>
+    <h2 class="section-title">Bắt đầu trong vài phút</h2>
+
+    <ol class="steps">
+      <li class="step">
+        <span class="step-num">1</span>
+        <div class="step-body">
+          <h4>Bước 1 — Tải và cài đặt</h4>
+          <p>Vào <a href="https://github.com/Pabhassaracitto/In4Up/releases/tag/1.25.0" target="_blank" rel="noopener">trang Releases của In4Up</a> và chọn tệp đúng nền tảng: <code>.apk</code> cho Android (arm64-v8a), <code>.ipa</code> cho iOS, <code>.zip</code> cho Windows, <code>.tar.gz</code> cho Linux. Android cần Android 8+ (minSdk 24); iOS cần 15.5 trở lên. Mở tệp để cài — không cần tài khoản cửa hàng.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-num">2</span>
+        <div class="step-body">
+          <h4>Bước 2 — Thêm nội dung của bạn</h4>
+          <p>Mở app lần đầu, cấp quyền truy cập tệp nếu được hỏi. Nhập audio/video/PDF của bạn vào Studio tương ứng (Listen/Watch/Read). Với audio, In4Up sẽ tự tạo “mục lục” câu bằng Silero VAD + Whisper để bạn chạm là nhảy tới câu đó.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-num">3</span>
+        <div class="step-body">
+          <h4>Bước 3 — Nghe chậm và shadowing cốt lõi</h4>
+          <p>Trong Listen Studio, kéo thanh tốc độ xuống 0.5× hoặc 0.3× — giọng vẫn tự nhiên nhờ UltraTimeStretch V2. Đặt điểm A–B để lặp một câu, bật rolling waveform để thấy chỗ ngắt câu. Khi đã nghe rõ, chuyển sang Speak Studio: bật “Shadowing”, nói theo mẫu và xem điểm phoneme để chỉnh phát âm.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-num">4</span>
+        <div class="step-body">
+          <h4>Bước 4 — Ôn lại trong Memory Garden</h4>
+          <p>Những câu/từ bạn đánh dấu sẽ vào Memory Garden. Mỗi ngày mở “Remember” — app nhắc ôn theo lịch SM-2/FSRS. Trả lời đúng thì khoảng cách ôn dài ra; sai thì được nhắc sớm hơn. Kiên trì vài phút mỗi ngày hiệu quả hơn học dồn.</p>
+        </div>
+      </li>
+    </ol>
+
+    <h3 class="faq-title">Câu hỏi thường gặp</h3>
+    <div class="faq">
+      <details>
+        <summary>App có cần mạng không?</summary>
+        <p>Không — tính năng cốt lõi hoạt động offline hoàn toàn (Hive + engine C++ local). Mạng chỉ cần khi bạn bật đồng bộ Firebase hoặc dùng AI đám mây BYOK.</p>
+      </details>
+      <details>
+        <summary>Tôi có thể chạy trên máy tính không?</summary>
+        <p>Có. Windows được hỗ trợ đầy đủ; Linux hỗ trợ một phần (đang bị chặn bởi <code>webkit2gtk-4.1</code> trên một số bản phân phối); bản Web bị giới hạn — các engine native không khả dụng trên web. Hãy chọn đúng tệp trong trang Releases.</p>
+      </details>
+      <details>
+        <summary>Tốc độ chậm có làm méo giọng không?</summary>
+        <p>Không đáng kể. Engine C++ UltraTimeStretch V2 giữ formant (âm sắc) nên giọng vẫn tự nhiên ở tốc độ rất chậm — khác với việc chỉ kéo giãn thô.</p>
+      </details>
+      <details>
+        <summary>Tôi là lập trình viên — chạy từ mã nguồn thế nào?</summary>
+        <p>Cài Flutter 3.44.1 (bản CI-pin), chạy <code>flutter pub get</code> rồi <code>flutter run --flavor stable</code> (Android có các flavor stable/dev/beta). Xem thêm trong README của repo.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ẢNH CHỤP MÀN HÌNH -->
+<section class="detail-section fade-in">
+  <div class="container">
+    <p class="section-label">Ảnh chụp màn hình</p>
+    <h2 class="section-title">Giao diện In4Up</h2>
+    <div class="shot-grid">
+      <figure>
+        <div class="shot-placeholder">
+          <span class="shot-icon">▣</span>
+          <p>[ảnh chụp màn hình thật cần thay]<br>Listen Studio — waveform &amp; A–B loop</p>
+        </div>
+        <figcaption class="shot-caption">Listen Studio — nghe chậm &amp; lặp đoạn</figcaption>
+      </figure>
+      <figure>
+        <div class="shot-placeholder">
+          <span class="shot-icon">▣</span>
+          <p>[ảnh chụp màn hình thật cần thay]<br>Read — văn bản Pali với lớp IPA</p>
+        </div>
+        <figcaption class="shot-caption">Read — reader tương tác với IPA</figcaption>
+      </figure>
+      <figure>
+        <div class="shot-placeholder">
+          <span class="shot-icon">▣</span>
+          <p>[ảnh chụp màn hình thật cần thay]<br>Memory Garden — lịch ôn ngắt quãng</p>
+        </div>
+        <figcaption class="shot-caption">Memory Garden — vườn ký ức</figcaption>
+      </figure>
+    </div>
+    <p class="shot-note">Chủ dự án sẽ thay 3 khung trên bằng ảnh chụp thật; khung hiện tại chỉ là giữ chỗ, không phải ảnh giả.</p>
+  </div>
+</section>
+
+<!-- GÓP Ý & BÁO LỖI -->
+<section class="detail-section fade-in" id="gop-y">
+  <div class="container">
+    <p class="section-label">Góp ý &amp; báo lỗi</p>
+    <h2 class="section-title">Bạn gặp lỗi hay có ý tưởng mới?</h2>
+    <div class="feedback-block">
+      <p class="feedback-lead">Gửi ẩn danh ngay trên trang này — không cần tài khoản GitHub hay email. Nếu bạn đã có tài khoản GitHub, có thể dùng link phụ bên dưới.</p>
+
+      <form id="feedback-form" data-app="In4Up" data-formspree="https://formspree.io/f/PLACEHOLDER_IN4UP_FORM_ID" novalidate>
+        <input type="hidden" name="app" value="In4Up">
+        <input type="hidden" name="_subject" value="[Bug] In4Up — báo lỗi từ Pabhassara Lab">
+        <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="feedback-tabs" role="group" aria-label="Loại góp ý">
+          <button type="button" class="ftype-btn active" data-type="bug" aria-pressed="true">🐞 Báo lỗi</button>
+          <button type="button" class="ftype-btn" data-type="enhancement" aria-pressed="false">💡 Góp ý tính năng</button>
+        </div>
+        <input type="hidden" name="type" value="bug">
+
+        <div class="f-row">
+          <div class="f-field">
+            <label for="fb-name-in4up">Tên <span class="optional">(không bắt buộc)</span></label>
+            <input id="fb-name-in4up" name="name" type="text" placeholder="Ẩn danh nếu để trống">
+          </div>
+          <div class="f-field">
+            <label for="fb-contact-in4up">Email <span class="optional">(không bắt buộc — để được phản hồi)</span></label>
+            <input id="fb-contact-in4up" name="email" type="email" placeholder="ten@email.com">
+          </div>
+        </div>
+
+        <div class="f-field">
+          <label for="fb-message-in4up">Mô tả <span class="req">*</span></label>
+          <textarea id="fb-message-in4up" name="message" rows="4" required placeholder="Mô tả lỗi bạn gặp phải…"></textarea>
+        </div>
+
+        <div class="f-field">
+          <label for="fb-details-in4up" data-detail-label>C&aacute;c bước t&aacute;i hiện</label>
+          <textarea id="fb-details-in4up" name="details" rows="3" placeholder="1. Mở app… 2. Chạm vào… 3. Điều gì xảy ra…"></textarea>
+        </div>
+
+        <div class="f-row">
+          <div class="f-field">
+            <label for="fb-device-in4up">Thiết bị / Phiên bản</label>
+            <input id="fb-device-in4up" name="device" type="text" placeholder="VD: Android 14, In4Up 1.25.0">
+          </div>
+          <div class="f-field" style="display:flex;align-items:flex-end;">
+            <button type="submit" class="btn btn-primary btn-app feedback-submit" style="width:100%;">Gửi góp ý</button>
+          </div>
+        </div>
+
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="feedback-alt">
+        Có tài khoản GitHub? Mở trực tiếp trên repo
+        <a href="https://github.com/Pabhassaracitto/In4Up/issues/new?title=%5BBug%5D%20&labels=bug&body=**M%C3%B4%20t%E1%BA%A3%20l%E1%BB%97i%3A**%0A%0A**C%C3%A1c%20b%C6%B0%E1%BB%9Bc%20t%C3%A1i%20hi%E1%BB%87n%3A**%0A%0A**Thi%E1%BA%BFt%20b%E1%BB%8B%2FPhi%C3%AAn%20b%E1%BA%A3n%3A**" target="_blank" rel="noopener">🐞 Báo lỗi</a>
+        ·
+        <a href="https://github.com/Pabhassaracitto/In4Up/issues/new?title=%5B%C4%90%E1%BB%81%20xu%E1%BA%A5t%5D&labels=enhancement&body=**T%C3%B4i%20mu%E1%BB%91n...**%0A%0A**V%E1%BA%A5n%20%C4%91%E1%BB%81%20c%E1%BA%A7n%20gi%E1%BA%A3i%20quy%E1%BA%BFt%3A**%0A%0A**%C4%90%E1%BB%81%20xu%E1%BA%A5t%20c%E1%BB%A7a%20t%C3%B4i%3A**" target="_blank" rel="noopener">💡 Góp ý tính năng</a>
+        — tiêu đề/nhãn/nội dung đã điền sẵn.
+      </div>
+      <p class="privacy-note">Form ẩn danh gửi qua Formspree; chủ dự án cần thay <code>PLACEHOLDER_IN4UP_FORM_ID</code> bằng Form ID thật tại <a href="https://formspree.io" target="_blank" rel="noopener" style="border:none;">formspree.io</a> để kích hoạt. Trước đó form sẽ hướng dẫn dùng link GitHub.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (chung với trang chủ) -->
+<footer id="contact" class="footer">
+  <div class="container fade-in">
+    <p class="footer-quote">“Pabhassaram idaṃ cittaṃ” — Tâm này vốn sáng chói.</p>
+    <div class="footer-links">
+      <a href="index.html">← Về Pabhassara Lab</a>
+      <a href="https://github.com/Pabhassaracitto" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/Pabhassaracitto/In4Up" target="_blank" rel="noopener">In4Up</a>
+    </div>
+    <p class="footer-copy">© 2026 Pabhassara Lab.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="feedback.js"></script>
+</body>
+</html>
